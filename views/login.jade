@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	form(action="http://localhost:3000/login/rsult/",method="post")
+		p username:
+			input(type="text",name="username")
+		p password:
+			input(type="text",name="password")
+		input(type="submit")

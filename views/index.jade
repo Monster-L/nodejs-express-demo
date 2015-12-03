@@ -1,0 +1,40 @@
+extends layout
+
+block content
+	.ui-container
+		.ui-slider
+			- var width = items.length + '00%'
+			ul.ui-slider-content(style="width:width")
+				each item in items
+					li
+						span(style="background-image:url(#{item})")
+		ul.ui-list.ui-list-pure.ui-border-tb
+			each item in items
+				li.ui-border-t
+					h5
+						span 1.faycheng
+						span.date 2月12日
+					h4 这本书太赞了，每次看都有不一样的体会和感悟，超级喜欢！期待大结局。
+				
+
+block script
+	script.
+		window.addEventListener('load', function(){
+			/* fz 即 FrozenJS 的意思 */
+			var slider = new fz.Scroll('.ui-slider', {
+					role: 'slider',
+					indicator: true,
+					autoplay: false,
+					interval: 3000
+				});
+
+			/* 滑动开始前 */
+			slider.on('beforeScrollStart', function(from, to) {
+			// from 为当前页，to 为下一页
+			})
+
+			/* 滑动结束 */
+			slider.on('scrollEnd', function(cruPage) {
+			// curPage 当前页
+			});
+		})
