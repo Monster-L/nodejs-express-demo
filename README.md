@@ -1,2 +1,2 @@
 ### nodejs-express-demo
-nodejs+express+frozenUI搭建的demo
+nodejs+express+frozenui搭建的demo
